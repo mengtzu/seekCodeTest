@@ -1,0 +1,23 @@
+{
+  "name": "seek-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sku start",
+    "test": "sku test",
+    "build": "sku build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prop-types": "^15.5.9",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
+    "seek-style-guide": "^23.3.1",
+    "sku": "^1.1.2"
+  }
+}
