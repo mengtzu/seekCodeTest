@@ -6,8 +6,10 @@ import { Provider } from 'react-redux';
 import store from './store/createStore';
 import App from './App/App';
 
+const context = {};
 
-export default () => `
+export default ({ path }) => {
+    return (`
   <!DOCTYPE html>
   <html>
     <head>
@@ -18,13 +20,15 @@ export default () => `
     </head>
     <body>
       <div id="app">${renderToString(
-            <Provider store={store}>
-                <StaticRouter>
-                    <App />
-                </StaticRouter>
-            </Provider>
-        )}</div>
+        <Provider store={store}>
+            <StaticRouter context={context} location={{ pathname: path }}>
+                <App />
+            </StaticRouter>
+        </Provider>
+    )}</div>
       <script type="text/javascript" src="/main.js"></script>
     </body>
   </html>
-`;
+`)
+
+};

@@ -1,0 +1,37 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+    margin-top: @grid-row-height;
+}
+
+.contentCard {
+    background-repeat: no-repeat;
+    background-position: center @grid-row-height;
+    background-size: 110px auto;
+    padding: (110px + @grid-row-height * 2) @grid-gutter-width @grid-row-height @grid-gutter-width;
+
+    @media only screen and (min-width: @responsive-breakpoint) {
+        background-position: @grid-gutter-width center;
+        background-size: (@grid-row-height * 20) (@grid-row-height * 20);
+        padding: @grid-row-height @grid-gutter-width @grid-row-height ((@grid-gutter-width * 2) + (@grid-row-height * 20));
+        min-height: @grid-row-height * 22;
+    }
+}
+
+.lyria {
+    &:extend(.contentCard);
+
+    background-image: url('./lyria.png');
+}
+
+.beatrix {
+    &:extend(.contentCard);
+
+    background-image: url('./beatrix.png');
+}
+
+.yoroshiku {
+    &:extend(.contentCard);
+
+    background-image: url('./yoroshiku.png');
+}

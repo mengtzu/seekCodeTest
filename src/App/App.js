@@ -1,34 +1,29 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
-import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom'
 import {
     StyleGuideProvider,
-    Header,
     Footer
 } from 'seek-style-guide/react'
 
+import Header from './components/Header/Header'
 import SignIn from './screens/SignIn/SignIn';
+import AdPacks from './screens/AdPacks/AdPacks';
+import FourOhFour from './screens/FourOhFour/FourOhFour';
 
-const mapStateToProps = (state) => {
-    return {
-        userName: state.advertiser.displayName,
-        authenticationStatus: state.advertiser.authenticationStatus
-    }
-}
-
-const App = (props) => {
+const App = () => {
     return (
         <StyleGuideProvider>
             <div>
-                <Header
-                    authenticationStatus={props.authenticationStatus}
-                    userName={props.userName}
-                />
+                <Header />
+                <Switch>
                     <Route exact path="/" component={SignIn} />
+                    <Route path="/adPacks" component={AdPacks} />
+                    <Route component={FourOhFour} />
+                </Switch>
                 <Footer />
             </div>
         </StyleGuideProvider>
     )
 };
 
-export default connect(mapStateToProps)(App)
+export default App;
