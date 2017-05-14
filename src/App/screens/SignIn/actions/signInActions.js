@@ -1,11 +1,11 @@
 import { SubmissionError } from 'redux-form'
 import authenticate from '../../../../fakeAPI/authentication';
 
-export const signIn = (values, history) => {
-    const authenticateSuccess = (advertiser) => {
-        //do something reduxy with the advertiser
-        //redirect to /adPacks
+export const AUTHENTICATE_ADVERTISER = 'AUTHENTICATE_ADVERTISER';
 
+export const signIn = (values, history, dispatch) => {
+    const authenticateSuccess = (advertiser) => {
+        dispatch({ type: AUTHENTICATE_ADVERTISER, payload: { username: values.username, ...advertiser}});
         history.push(`/adPacks`);
     };
 
@@ -20,4 +20,4 @@ export const signIn = (values, history) => {
     } else {
         authenticationError();
     }
-}
+};

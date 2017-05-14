@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SignIn.less';
-import { connect } from 'react-redux';
+
 import {
     PageBlock,
     Section,
@@ -22,14 +22,16 @@ const renderAsideSignIn = () => (
             <Text>More candidates than anyone else</Text>
             <Text>Save time finding the right candidates</Text>
             <Text>We'll support you every step of the way</Text>
+            <div className={styles.marketingImage} />
         </Section>
     </Card>
 );
 
 const SignIn = ({ history }) => {
 
-    const handleSignIn = (values) => {
-        return signIn(values, history);
+    const handleSignIn = (values, dispatch) => {
+        //This will only work with thunk; when thunk is present redux-form provides the dispatch param
+        return signIn(values, history, dispatch);
     };
 
     return (

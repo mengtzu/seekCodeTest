@@ -18,8 +18,7 @@ const fieldRenderer = ({input, type, ...restProps}) => {
     );
 }
 
-const SignInForm = ({ error, handleSubmit, pristine, reset, submitting }) => {
-    console.log(`Submitting: ${submitting}`);
+const SignInForm = ({ error, handleSubmit, submitting }) => {
     return (
         <form onSubmit={handleSubmit}>
             <Field id="username" name="username" label="Username" type="text" component={fieldRenderer} />
