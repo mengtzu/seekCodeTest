@@ -14,6 +14,15 @@ const getIconStyle = (icon) => {
         case 'yoroshiku':
             return styles.yoroshiku;
             break;
+        case 'otsukaresama':
+            return styles.otsukaresama;
+            break;
+        case 'chotto':
+            return styles.chotto;
+            break;
+        case 'gujjobu':
+            return styles.gujjobu;
+            break;
         default:
             return styles.lyria;
     }

@@ -3,13 +3,15 @@ import thunk from 'redux-thunk';
 import { reducer as formReducer } from 'redux-form'
 
 import advertiserReducer from './reducers/advertiserReducer';
+import productsReducer from './reducers/productsReducer';
 
 
 const rootReducer = combineReducers({
     advertiser: advertiserReducer,
+    products: productsReducer,
     form: formReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
-export default store
+export default store;

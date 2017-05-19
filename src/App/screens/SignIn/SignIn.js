@@ -22,7 +22,6 @@ const renderAsideSignIn = () => (
             <Text>More candidates than anyone else</Text>
             <Text>Save time finding the right candidates</Text>
             <Text>We'll support you every step of the way</Text>
-            <div className={styles.marketingImage} />
         </Section>
     </Card>
 );
@@ -31,6 +30,7 @@ const SignIn = ({ history }) => {
 
     const handleSignIn = (values, dispatch) => {
         //This will only work with thunk; when thunk is present redux-form provides the dispatch param
+        //likewise the history prop is provided by react-router, it won't work if this isn't a route component
         return signIn(values, history, dispatch);
     };
 
@@ -50,8 +50,7 @@ const SignIn = ({ history }) => {
                     </Card>
                 </AsidedLayout>
             </PageBlock>
-
-
+            
             <CodeTestHelpMessage>
                 <Text heading>Welcome to the SEEK Store code test</Text>
                 <Text>Use <Strong>Apple</Strong>, <Strong>Ford</Strong>, <Strong>Unilever</Strong> or <Strong>Nike</Strong> as username to see discounts</Text>
