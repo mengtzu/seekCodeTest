@@ -6,6 +6,7 @@ import {
     Section,
     Card
 } from 'seek-style-guide/react';
+import styles from './AdPacks.less';
 
 import CodeTestHelpMessage from '../../components/CodeTestHelpMessage/CodeTestHelpMessage';
 
@@ -13,7 +14,11 @@ const mapStateToProps = (state) => {
     return {
         products: state.products
     };
-}
+};
+
+const gstLabel = () => (
+    <span className={styles.gstLabel}>+GST</span>
+);
 
 const AdPacks = ({ products }) => {
     return (
@@ -29,7 +34,7 @@ const AdPacks = ({ products }) => {
                         <Text heading>
                             Classic Ad
                         </Text>
-                        <Text>{products.classic.basePrice}</Text>
+                        <Text>${products.classic.basePrice} {gstLabel()}</Text>
                     </Section>
                 </Card>
             </PageBlock>
@@ -40,6 +45,7 @@ const AdPacks = ({ products }) => {
                         <Text heading>
                             Standout Ad
                         </Text>
+                        <Text>${products.standout.basePrice} {gstLabel()}</Text>
                     </Section>
                 </Card>
             </PageBlock>
@@ -50,6 +56,7 @@ const AdPacks = ({ products }) => {
                         <Text heading>
                             Premium Ad
                         </Text>
+                        <Text>${products.premium.basePrice} {gstLabel()} </Text>
                     </Section>
                 </Card>
             </PageBlock>
