@@ -13,6 +13,7 @@ import { formatMoney } from 'accounting-js';
 import './VISA-logo.png';
 
 import { CLASSIC, STANDOUT, PREMIUM } from '../../../shared/constants/products';
+import { completePayment } from './actions/checkoutActions';
 import CodeTestHelpMessage from '../../components/CodeTestHelpMessage/CodeTestHelpMessage';
 
 const mapStateToProps = (state) => {
@@ -21,6 +22,14 @@ const mapStateToProps = (state) => {
         advertiser: state.advertiser
     }
 };
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handlePayment: (history, checkout) => {
+            return completePayment(dispatch, history, checkout);
+        }
+    }
+}
 
 const renderLineItem = (label, lineItem) => {
     if (lineItem.quantity && lineItem.subTotal) {
@@ -40,7 +49,11 @@ const renderLineItem = (label, lineItem) => {
     }
 };
 
-const Checkout = ({ checkout, advertiser, history }) => {
+const Checkout = ({ checkout, advertiser, history, handlePayment }) => {
+
+    const onPaymentClick = () => {
+        return handlePayment(history, checkout);
+    };
 
     const returnToAdPacks = () => {
         history.push('/adPacks');
@@ -101,7 +114,7 @@ const Checkout = ({ checkout, advertiser, history }) => {
                             </div>
                         </Section>
                         <Section>
-                            <Button color="pink">Pay Now</Button>
+                            <Button color="pink" loading={checkout.paying} onClick={onPaymentClick}>Pay Now</Button>
                             <Button className={styles.backButton} color="transparent" onClick={returnToAdPacks}>Go back</Button>
                         </Section>
                     </div>
@@ -120,4 +133,4 @@ const Checkout = ({ checkout, advertiser, history }) => {
     }
 };
 
-export default connect(mapStateToProps)(Checkout);
+export default connect(mapStateToProps, mapDispatchToProps)(Checkout);

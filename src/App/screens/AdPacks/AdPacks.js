@@ -1,13 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-    Text,
-    PageBlock,
-    Section,
-    Card,
-    Dropdown
+    Text
 } from 'seek-style-guide/react';
 
+import AdPacksBalance from '../../components/AdPackBalace/AdPackBalance';
 import AdPacksForm from './components/AdPacksForm/AdPacksForm';
 import CodeTestHelpMessage from '../../components/CodeTestHelpMessage/CodeTestHelpMessage';
 import { goToCheckout } from './actions/adPackActions';
@@ -27,13 +24,13 @@ const AdPacks = ({ products, user, history }) => {
 
     return (
         <div>
-            <CodeTestHelpMessage icon="yoroshiku">
-                <Text heading>You logged in, well done!</Text>
-                <Text>Honestly we weren't sure you'd ever make it</Text>
-            </CodeTestHelpMessage>
-
+            <AdPacksBalance />
             <AdPacksForm onSubmit={handleCheckout} products={products} />
 
+            <CodeTestHelpMessage icon="yoroshiku">
+                <Text heading>For corporate use</Text>
+                <Text>The specially negotiated prices indicate frequent use, but not at the insane level of bulk that would require a third party uploader.  I'm assuming the user is a corporate or other large org customer that is familiar with the product offerings and is already committed to posting many ads.  They don't need a hard sell but they may need reminders to help balance a recruiting budget.</Text>
+            </CodeTestHelpMessage>
         </div>
     )
 };

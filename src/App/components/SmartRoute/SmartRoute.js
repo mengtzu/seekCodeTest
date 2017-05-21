@@ -26,7 +26,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const getRender = ({ privateRoute, onRouteEnter, handleRouteEnter, authenticationStatus, Component }) => {
     return (props) => {
-        if (authenticationStatus && (authenticationStatus !== loggedIn)) {
+        if (privateRoute && (authenticationStatus !== loggedIn)) {
             return (
                 <Redirect to={{
                 pathname: '/',

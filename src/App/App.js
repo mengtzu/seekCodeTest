@@ -6,6 +6,7 @@ import {
 } from 'seek-style-guide/react'
 
 import { getProductsData } from './screens/AdPacks/actions/adPackActions';
+import { signOut } from './screens/SignIn/actions/signInActions';
 import SmartRoute from './components/SmartRoute/SmartRoute';
 import Header from './components/Header/Header'
 import SignIn from './screens/SignIn/SignIn';
@@ -24,6 +25,7 @@ const App = () => {
                     <SmartRoute protectedRoute={true} path="/adPacks" component={AdPacks} onRouteEnter={getProductsData} />
                     <SmartRoute protectedRoute={true} path="/checkout" component={Checkout} />
                     <SmartRoute protectedRoute={true} path="/confirmation" component={Confirmation} />
+                    <Route path="/Login/Logout" component={SignIn} />
                     <Route component={FourOhFour} />
                 </Switch>
                 <Footer />

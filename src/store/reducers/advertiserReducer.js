@@ -1,5 +1,6 @@
-import { AUTHENTICATE_ADVERTISER } from '../../App/screens/SignIn/actions/signInActions';
 import { CLASSIC, STANDOUT, PREMIUM } from '../../shared/constants/products';
+import { AUTHENTICATE_ADVERTISER } from '../../App/screens/SignIn/actions/signInActions';
+import { PAYMENT_CONFIRMED } from '../../App/screens/Checkout/actions/checkoutActions';
 
 const AUTH_STATUS_UNAUTHENTICATED = 'pending'; //'unauthenticated' exposes the real SEEK login, don't want that!
 const AUTH_STATUS_AUTHENTICATED = 'authenticated';
@@ -25,6 +26,17 @@ const advertiserReducer = (state = initialState, action = {}) => {
                 displayName: action.payload.displayName,
                 authenticationStatus: AUTH_STATUS_AUTHENTICATED,
                 discounts: action.payload.discounts
+            };
+            break;
+        case PAYMENT_CONFIRMED:
+            const adStock = {};
+            adStock[CLASSIC] = state.adStock[CLASSIC] + action.payload[CLASSIC].quantity;
+            adStock[STANDOUT] = state.adStock[STANDOUT] + action.payload[STANDOUT].quantity;
+            adStock[PREMIUM] = state.adStock[PREMIUM] + action.payload[PREMIUM].quantity;
+
+            return {
+                ...state,
+                adStock
             };
             break;
         default:
