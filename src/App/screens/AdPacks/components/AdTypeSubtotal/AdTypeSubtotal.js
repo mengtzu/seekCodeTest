@@ -42,7 +42,7 @@ const AdTypeSubtotal = ({ adType, products, discounts, adPacksForm}) => {
 
     if (subTotal) {
         return (
-            <Text strong>{formatMoney(subTotal)} {renderSavings(savings)}</Text>
+            <Text subheading>Subtotal: {formatMoney(subTotal)} {renderSavings(savings)}</Text>
         )
     } else {
         return null;

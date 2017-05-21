@@ -98,7 +98,7 @@ const Checkout = ({ checkout, advertiser, history, handlePayment }) => {
                     </div>
 
                     <div className={styles.paymentActionWrapper}>
-                        <Section>
+                        <Section className={styles.totalWrapper}>
                             <Text heading>Total</Text>
                             <div className={styles.totalItemWrapper}>
                                 <Text>Sub Total:</Text>
@@ -113,7 +113,7 @@ const Checkout = ({ checkout, advertiser, history, handlePayment }) => {
                                 <Text className={styles.totalItemPrice} strong>{formatMoney(checkout.grandTotal)}</Text>
                             </div>
                         </Section>
-                        <Section>
+                        <Section className={styles.actionButtons}>
                             <Button color="pink" loading={checkout.paying} onClick={onPaymentClick}>Pay Now</Button>
                             <Button className={styles.backButton} color="transparent" onClick={returnToAdPacks}>Go back</Button>
                         </Section>

@@ -1,5 +1,22 @@
 @import (reference) "~seek-style-guide/theme";
 
-.gstLabel {
-    .smallTextResponsive();
+.adTypeWrapper {
+    @media only screen and (min-width: @responsive-breakpoint) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.adCoreWrapper {
+    @media only screen and (min-width: @responsive-breakpoint) {
+        width: @grid-column-width * 5;
+    }
+}
+
+.adMarketingWrapper {
+    display: none;
+
+    @media only screen and (min-width: @responsive-breakpoint) {
+        display: block;
+    }
 }

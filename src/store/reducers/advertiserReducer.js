@@ -30,9 +30,9 @@ const advertiserReducer = (state = initialState, action = {}) => {
             break;
         case PAYMENT_CONFIRMED:
             const adStock = {};
-            adStock[CLASSIC] = state.adStock[CLASSIC] + action.payload[CLASSIC].quantity;
-            adStock[STANDOUT] = state.adStock[STANDOUT] + action.payload[STANDOUT].quantity;
-            adStock[PREMIUM] = state.adStock[PREMIUM] + action.payload[PREMIUM].quantity;
+            adStock[CLASSIC] = state.adStock[CLASSIC] + parseInt(action.payload[CLASSIC].quantity);
+            adStock[STANDOUT] = state.adStock[STANDOUT] + parseInt(action.payload[STANDOUT].quantity);
+            adStock[PREMIUM] = state.adStock[PREMIUM] + parseInt(action.payload[PREMIUM].quantity);
 
             return {
                 ...state,

@@ -5,8 +5,7 @@ import {
     PageBlock,
     Card,
     Section,
-    Dropdown,
-    Button
+    Dropdown
 } from 'seek-style-guide/react';
 import styles from './AdPacksForm.less';
 
@@ -14,10 +13,8 @@ import { CLASSIC, STANDOUT, PREMIUM } from '../../../../../shared/constants/prod
 import Discounts from '../Discounts/Discounts';
 import AdTypeSubtotal from '../AdTypeSubtotal/AdTypeSubtotal';
 import AdPacksTotal from '../AdPacksTotal/AdPacksTotal';
-
-const gstLabel = () => (
-    <span className={styles.gstLabel}>+GST</span>
-);
+import PlusGST from '../PlusGST/PlusGST';
+import AdTypeMarketing from '../AdTypeMarketing/AdTypeMarketing';
 
 const dropdownOptions = (() => {
     const dropDownArray = [];
@@ -37,7 +34,7 @@ const dropdownRenderer = ({input, ...restProps}) => {
     )
 };
 
-const initialValues = {
+const initialValues = {  //TODO: Wire up to checkout reducer
     classic: {
         quantity: '0'
     },
@@ -49,59 +46,34 @@ const initialValues = {
     }
 };
 
+const renderAdType = (label, adType, basePrice) => (
+    <PageBlock>
+        <Card>
+            <Section className={styles.adTypeWrapper}>
+                <div className={styles.adCoreWrapper}>
+                    <Text heading>
+                        {label}
+                    </Text>
+                    <Text>${basePrice} <PlusGST /></Text>
+                    <Discounts adType={ adType } />
+                    <Text strong>Add <Field name={ adType + '.quantity' } component={dropdownRenderer} /> to account</Text>
+                    <AdTypeSubtotal adType={ adType } />
+                </div>
+                <div className={styles.adMarketingWrapper}>
+                    <AdTypeMarketing adType={ adType } />
+                </div>
+            </Section>
+        </Card>
+    </PageBlock>
+);
+
 const AdPacksForm = ({ products, handleSubmit, submitting }) => {
     return (
         <form onSubmit={handleSubmit}>
-            <PageBlock>
-                <Card>
-                    <Section>
-                        <Text heading>
-                            Classic Ad
-                        </Text>
-                        <Text>${products.classic.basePrice} {gstLabel()}</Text>
-                        <Discounts adType={ CLASSIC } />
-                        <Text strong>Add <Field name={ CLASSIC + '.quantity' } component={dropdownRenderer} /> to account</Text>
-                        <AdTypeSubtotal adType={ CLASSIC } />
-                    </Section>
-                </Card>
-            </PageBlock>
-
-            <PageBlock>
-                <Card>
-                    <Section>
-                        <Text heading>
-                            Standout Ad
-                        </Text>
-                        <Text>${products.standout.basePrice} {gstLabel()}</Text>
-                        <Discounts adType={ STANDOUT } />
-                        <Text strong>Add <Field name={ STANDOUT + '.quantity' } component={dropdownRenderer} /> to account</Text>
-                        <AdTypeSubtotal adType={ STANDOUT } />
-                    </Section>
-                </Card>
-            </PageBlock>
-
-            <PageBlock>
-                <Card>
-                    <Section>
-                        <Text heading>
-                            Premium Ad
-                        </Text>
-                        <Text>${products.premium.basePrice} {gstLabel()} </Text>
-                        <Discounts adType={ PREMIUM } />
-                        <Text strong>Add <Field name={ PREMIUM + '.quantity' } component={dropdownRenderer} /> to account</Text>
-                        <AdTypeSubtotal adType={ PREMIUM } />
-                    </Section>
-                </Card>
-            </PageBlock>
-
-            <PageBlock>
-                <Card>
-                    <Section>
-                        <AdPacksTotal />
-                        <Button type="submit" loading={submitting} color="pink">Checkout</Button>
-                    </Section>
-                </Card>
-            </PageBlock>
+            {renderAdType('Classic Ad', CLASSIC, products[CLASSIC].basePrice)}
+            {renderAdType('Standout Ad', STANDOUT, products[STANDOUT].basePrice)}
+            {renderAdType('Premium Ad', PREMIUM, products[PREMIUM].basePrice)}
+            <AdPacksTotal submitting={submitting} />
         </form>
     )
 };

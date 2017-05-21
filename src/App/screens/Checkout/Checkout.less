@@ -1,12 +1,50 @@
 @import (reference) "~seek-style-guide/theme";
 
+.flexRight {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.paymentInfoWrapper {
+    @media only screen and (min-width: @responsive-breakpoint) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.lineItemsWrapper {
+    @media only screen and (min-width: @responsive-breakpoint) {
+        flex-grow: 1;
+        margin-right: @grid-gutter-width;
+    }
+}
+
+.cardInfoWrapper {
+    @media only screen and (min-width: @responsive-breakpoint) {
+        width: 350px;
+    }
+}
+
 .lineItemWrapper {
     display: flex;
 }
 
 .lineItemPrice {
-    flex-grow: 1;
-    text-align: right;
+    .flexRight();
+}
+
+.paymentActionWrapper {
+    @media only screen and (min-width: @responsive-breakpoint) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.totalWrapper {
+    @media only screen and (min-width: @responsive-breakpoint) {
+        flex-grow: 1;
+        margin-right: @grid-gutter-width;
+    }
 }
 
 .totalItemWrapper {
@@ -14,8 +52,7 @@
 }
 
 .totalItemPrice {
-    flex-grow: 1;
-    text-align: right;
+    .flexRight();
 }
 
 .cardWrapper {
@@ -32,10 +69,15 @@
 }
 
 .creditCardText {
-    flex-grow: 1;
-    text-align: right;
+    .flexRight();
 }
 
-.backButton {
-    margin-left: @grid-gutter-width;
+.actionButtons {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (min-width: @responsive-breakpoint) {
+        width: 350px;
+        align-items: flex-end;
+    }
 }

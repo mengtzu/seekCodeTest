@@ -22,9 +22,9 @@ const App = () => {
                 <Header />
                 <Switch>
                     <Route exact path="/" component={SignIn} />
-                    <SmartRoute protectedRoute={true} path="/adPacks" component={AdPacks} onRouteEnter={getProductsData} />
-                    <SmartRoute protectedRoute={true} path="/checkout" component={Checkout} />
-                    <SmartRoute protectedRoute={true} path="/confirmation" component={Confirmation} />
+                    <SmartRoute privateRoute={true} path="/adPacks" component={AdPacks} onRouteEnter={getProductsData} />
+                    <SmartRoute privateRoute={true} path="/checkout" component={Checkout} />
+                    <SmartRoute privateRoute={true} path="/confirmation" component={Confirmation} />
                     <Route path="/Login/Logout" component={SignIn} />
                     <Route component={FourOhFour} />
                 </Switch>

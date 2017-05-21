@@ -1,0 +1,27 @@
+@import (reference) "~seek-style-guide/theme";
+
+.root {
+    background-position: left top;
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    padding-left: 220px;
+    min-height: 205px;
+}
+
+.classic {
+    &:extend(.root);
+
+    background-image: url('./classic.png');
+}
+
+.standout {
+    &:extend(.root);
+
+    background-image: url('./standout.png');
+}
+
+.premium {
+    &:extend(.root);
+
+    background-image: url('./premium.png');
+}

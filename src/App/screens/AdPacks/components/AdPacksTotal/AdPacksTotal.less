@@ -1,5 +1,13 @@
 @import (reference) "~seek-style-guide/theme";
 
+.checkoutButton {
+    margin-top: @grid-row-height * 2;
+}
+
 .savings {
     color: @sk-green;
+
+    @media only screen and (min-width: @responsive-breakpoint) {
+        display: block;
+    }
 }
