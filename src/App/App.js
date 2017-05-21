@@ -22,8 +22,8 @@ const App = () => {
                 <Switch>
                     <Route exact path="/" component={SignIn} />
                     <SmartRoute protectedRoute={true} path="/adPacks" component={AdPacks} onRouteEnter={getProductsData} />
-                    <Route path="/checkout" component={Checkout} />
-                    <Route path="/confirmation" component={Confirmation} />
+                    <SmartRoute protectedRoute={true} path="/checkout" component={Checkout} />
+                    <SmartRoute protectedRoute={true} path="/confirmation" component={Confirmation} />
                     <Route component={FourOhFour} />
                 </Switch>
                 <Footer />

@@ -4,62 +4,36 @@ import {
     Text,
     PageBlock,
     Section,
-    Card
+    Card,
+    Dropdown
 } from 'seek-style-guide/react';
-import styles from './AdPacks.less';
 
+import AdPacksForm from './components/AdPacksForm/AdPacksForm';
 import CodeTestHelpMessage from '../../components/CodeTestHelpMessage/CodeTestHelpMessage';
+import { goToCheckout } from './actions/adPackActions';
 
 const mapStateToProps = (state) => {
     return {
-        products: state.products
+        products: state.products,
+        user: state.advertiser.username
     };
 };
 
-const gstLabel = () => (
-    <span className={styles.gstLabel}>+GST</span>
-);
+const AdPacks = ({ products, user, history }) => {
 
-const AdPacks = ({ products }) => {
+    const handleCheckout = (values, dispatch) => {
+        return goToCheckout(values, user, history, dispatch);  //Needs to be return if there's a promise in the chain
+    };
+
     return (
         <div>
             <CodeTestHelpMessage icon="yoroshiku">
                 <Text heading>You logged in, well done!</Text>
                 <Text>Honestly we weren't sure you'd ever make it</Text>
             </CodeTestHelpMessage>
-    
-            <PageBlock>
-                <Card>
-                    <Section>
-                        <Text heading>
-                            Classic Ad
-                        </Text>
-                        <Text>${products.classic.basePrice} {gstLabel()}</Text>
-                    </Section>
-                </Card>
-            </PageBlock>
 
-            <PageBlock>
-                <Card>
-                    <Section>
-                        <Text heading>
-                            Standout Ad
-                        </Text>
-                        <Text>${products.standout.basePrice} {gstLabel()}</Text>
-                    </Section>
-                </Card>
-            </PageBlock>
+            <AdPacksForm onSubmit={handleCheckout} products={products} />
 
-            <PageBlock>
-                <Card>
-                    <Section>
-                        <Text heading>
-                            Premium Ad
-                        </Text>
-                        <Text>${products.premium.basePrice} {gstLabel()} </Text>
-                    </Section>
-                </Card>
-            </PageBlock>
         </div>
     )
 };
