@@ -1,7 +1,7 @@
 # SEEK STORE
 Code test implementation
 
-###Getting Started
+### Getting Started
 
 1.  Run `npm install` in the directory where you cloned this repo
 
