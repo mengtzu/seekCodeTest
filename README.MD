@@ -25,7 +25,7 @@ A browser window should open running the app at http://localhost:8080/
  usefulness of making flexibility the first priority with them.  The specific
  *values* of discounts need to be flexible (ie X for Y not just 5 for 4, 3 for 2)
  but if Sales want to cut a whole new kind of deal they can make a feature request.
- Likewise a new kind of add probably needs UI and UX considerations, it's unlikely
+ Likewise a new kind of ad probably needs UI and UX considerations, it's unlikely
  any change to the react app would be the hardest/slowest part of that process.
 
  - I wanted to keep as much of my submitted code within the confines of my
