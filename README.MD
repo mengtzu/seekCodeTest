@@ -52,7 +52,7 @@ A browser window should open running the app at http://localhost:8080/
  too many `../../../`s in import statements.  I still think this structure is
  worthwhile in keeping related concerns close together (and has proven itself
  in componetised situations, it's no accident it resembles the "angular best
- practice" structure
+ practice" structure)
 
  - I used some things purely to learn them (redux-form).  I think that's
  obviously useful for sign in but since there's no need for validation on
