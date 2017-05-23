@@ -1,4 +1,4 @@
-#SEEK STORE
+# SEEK STORE
 Code test implementation
 
 ###Getting Started
@@ -9,7 +9,7 @@ Code test implementation
 
 A browser window should open running the app at http://localhost:8080/
 
-###Assumptions, Strategies and Constraints
+### Assumptions, Strategies and Constraints
 
  - I concentrated heavily on the user experience.  In a SEEK context, the brief
  suggests a particular kind of customer, one who purchases far more ads than
@@ -72,7 +72,7 @@ A browser window should open running the app at http://localhost:8080/
  but time did not allow.
 
 
- ###Great, what about the tests?  `npm test` right?
+ ### Great, what about the tests?  `npm test` right?
 
  Er, no.
 
