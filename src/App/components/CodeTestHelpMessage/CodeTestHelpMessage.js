@@ -2,15 +2,16 @@ import React from 'react';
 import styles from './CodeTestHelpMessage.less';
 import {
     PageBlock,
-    AsidedLayout,
     Card
 } from 'seek-style-guide/react'
+
+//This is a silly component, only used for meta purposes in the code test
 
 const getIconStyle = (icon) => {
     switch(icon) {
         case 'beatrix':
             return styles.beatrix;
-            break;
+            break;  //You'll never reach this break but I think it's useful to stick to a case: {whatever} break; pattern
         case 'yoroshiku':
             return styles.yoroshiku;
             break;

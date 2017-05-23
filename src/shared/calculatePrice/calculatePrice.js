@@ -1,6 +1,3 @@
-//This file should arguably be named index.js but I've been getting really annoyed with seeing about a thousand
-//index.js in file search
-
 import { DISCOUNT_TYPE_FLAT_RATE, DISCOUNT_TYPE_X_FOR_Y, DISCOUNT_TYPE_THRESHOLD } from '../constants/discounts';
 import { CLASSIC, STANDOUT, PREMIUM } from '../constants/products';
 

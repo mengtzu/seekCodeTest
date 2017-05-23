@@ -3,6 +3,7 @@ import React from 'react';
 import { Text, TextLink } from 'seek-style-guide/react';
 import CodeTestHelpMessage from '../../components/CodeTestHelpMessage/CodeTestHelpMessage';
 
+//This is just an example of a routing fallback
 
 const FourOhFour = () => (
     <CodeTestHelpMessage icon="beatrix">
