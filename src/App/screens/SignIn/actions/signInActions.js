@@ -1,5 +1,5 @@
 import { SubmissionError } from 'redux-form'
-import authenticate from '../../../../fakeAPI/authentication';
+import { authenticate } from '../../../../fakeAPI/authentication';
 
 export const AUTHENTICATE_ADVERTISER = 'AUTHENTICATE_ADVERTISER';
 

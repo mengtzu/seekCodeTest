@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 
-const loggedIn = 'authenticated';  //TODO get this from common source
+import { AUTH_STATUS_AUTHENTICATED } from '../../../shared/constants/loginStates';
 
 //This component helps us get around some limitations of react-router-4 without wiring up redial or complex auth
 //If privateRoute is set, it will redirect unauthenticated users
@@ -26,7 +26,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const getRender = ({ privateRoute, onRouteEnter, handleRouteEnter, authenticationStatus, Component }) => {
     return (props) => {
-        if (privateRoute && (authenticationStatus !== loggedIn)) {
+        if (privateRoute && (authenticationStatus !== AUTH_STATUS_AUTHENTICATED)) {
             return (
                 <Redirect to={{
                 pathname: '/',

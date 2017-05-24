@@ -34,7 +34,7 @@ const dropdownRenderer = ({input, ...restProps}) => {
     )
 };
 
-const initialValues = {  //TODO: Wire up to checkout reducer
+const initialValues = {
     classic: {
         quantity: '0'
     },
