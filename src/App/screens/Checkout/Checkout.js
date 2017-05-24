@@ -11,6 +11,7 @@ import {
 import styles from './Checkout.less';
 import { formatMoney } from 'accounting-js';
 
+import { routes } from '../../constants/routes';
 import { CLASSIC, STANDOUT, PREMIUM } from '../../../shared/constants/products';
 import { completePayment } from './actions/checkoutActions';
 import CodeTestHelpMessage from '../../components/CodeTestHelpMessage/CodeTestHelpMessage';
@@ -55,7 +56,7 @@ export const Checkout = ({ checkout, advertiser, history, handlePayment }) => {
     };
 
     const returnToAdPacks = () => {
-        history.push('/adPacks');
+        history.push(routes.adPacks);
     };
 
     const fourOhFour = () => {

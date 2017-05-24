@@ -10,6 +10,7 @@ import {
 import styles from './Confirmation.less';
 
 import AdPackBalance from '../../components/AdPackBalace/AdPackBalance';
+import { routes } from '../../constants/routes';
 import CodeTestHelpMessage from '../../components/CodeTestHelpMessage/CodeTestHelpMessage';
 
 
@@ -29,10 +30,10 @@ export const Confirmation = () => {
 
             <PageBlock>
                 <Section>
-                    <Link to="/adPacks">
+                    <Link to={routes.adPacks}>
                         <Text>Purchase more ads</Text>
                     </Link>
-                    <TextLink href="/Login/Logout">
+                    <TextLink href={routes.logout}>
                         <Text>Sign out</Text>
                     </TextLink>
                 </Section>

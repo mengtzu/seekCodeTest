@@ -14,6 +14,7 @@ import AdPacks from './screens/AdPacks/AdPacks';
 import Checkout from './screens/Checkout/Checkout';
 import Confirmation from './screens/Confirmation/Confirmation';
 import FourOhFour from './screens/FourOhFour/FourOhFour';
+import routes from './constants/routes';
 
 const App = () => {
     return (
@@ -21,11 +22,11 @@ const App = () => {
             <div>
                 <Header />
                 <Switch>
-                    <Route exact path="/" component={SignIn} />
-                    <SmartRoute privateRoute={true} path="/adPacks" component={AdPacks} onRouteEnter={getProductsData} />
-                    <SmartRoute privateRoute={true} path="/checkout" component={Checkout} />
-                    <SmartRoute privateRoute={true} path="/confirmation" component={Confirmation} />
-                    <Route path="/Login/Logout" component={SignIn} />
+                    <Route exact path={routes.root} component={SignIn} />
+                    <SmartRoute privateRoute={true} path={routes.adPacks} component={AdPacks} onRouteEnter={getProductsData} />
+                    <SmartRoute privateRoute={true} path={routes.checkout} component={Checkout} />
+                    <SmartRoute privateRoute={true} path={routes.confirmation} component={Confirmation} />
+                    <Route path={routes.logout} component={SignIn} />
                     <Route component={FourOhFour} />
                 </Switch>
                 <Footer />

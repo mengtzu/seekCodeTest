@@ -1,12 +1,13 @@
 import { SubmissionError } from 'redux-form'
 import { authenticate } from '../../../../fakeAPI/authentication';
+import { routes } from '../../../constants/routes';
 
 export const AUTHENTICATE_ADVERTISER = 'AUTHENTICATE_ADVERTISER';
 
 export const signIn = (values, history, dispatch) => {
     const authenticateSuccess = (advertiser) => {
         dispatch({ type: AUTHENTICATE_ADVERTISER, payload: { username: values.username, ...advertiser}});
-        history.push(`/adPacks`);
+        history.push(routes.adPacks);
     };
 
     const authenticationError = () => {

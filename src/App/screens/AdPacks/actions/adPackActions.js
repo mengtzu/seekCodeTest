@@ -1,5 +1,6 @@
 import { getProducts } from '../../../../fakeAPI/products';
 import { getCartDetailsForCheckout } from '../../../../fakeAPI/checkout';
+import { routes } from '../../../constants/routes';
 
 export const GET_PRODUCTS_SUCCESS = 'GET_PRODUCTS_SUCCESS';
 
