@@ -3,6 +3,15 @@
   "plugins": [
       "add-react-displayname",
       "transform-class-properties",
-      "transform-object-rest-spread"
+      "transform-object-rest-spread",
+      [
+          "babel-plugin-transform-imports",
+          {
+              "seek-style-guide/react": {
+                  "transform": "seek-style-guide/react/${member}/${member}",
+                  "preventFullImport": true
+              }
+          }
+      ]
   ]
 }
