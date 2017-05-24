@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="root"
+>
+  <div
+    className=""
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="root"
+      >
+        <div
+          className="root"
+        >
+          <div
+            className="root heading"
+          >
+            <span
+              className=""
+            >
+              Your available ads
+            </span>
+          </div>
+          <div
+            className="packBalanceWrapper"
+          >
+            <div
+              className="root packBalanceText"
+            >
+              <span
+                className="root"
+              >
+                Classic
+                :
+              </span>
+            </div>
+            <div
+              className="root packBalanceQuantity"
+            >
+              <span
+                className=""
+              >
+                32
+              </span>
+            </div>
+          </div>
+          <div
+            className="packBalanceWrapper"
+          >
+            <div
+              className="root packBalanceText"
+            >
+              <span
+                className="root"
+              >
+                Standout
+                :
+              </span>
+            </div>
+            <div
+              className="root packBalanceQuantity"
+            >
+              <span
+                className=""
+              >
+                0
+              </span>
+            </div>
+          </div>
+          <div
+            className="packBalanceWrapper"
+          >
+            <div
+              className="root packBalanceText"
+            >
+              <span
+                className="root"
+              >
+                Premium
+                :
+              </span>
+            </div>
+            <div
+              className="root packBalanceQuantity"
+            >
+              <span
+                className=""
+              >
+                777
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

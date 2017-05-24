@@ -30,7 +30,7 @@ const renderSavings = (savings) => {
     }
 };
 
-const AdPacksTotal = ({ products, discounts, adPacksForm, submitting}) => {
+export const AdPacksTotal = ({ products, discounts, adPacksForm, submitting}) => {
     const calculatedTotal = calculateTotal({
         discounts,
         products,

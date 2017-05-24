@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with no discounts 1`] = `null`;
+
+exports[`renders correctly with no valid discounts 1`] = `<div />`;
+
+exports[`renders correctly with valid discounts 1`] = `
+<div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Your price: $
+      199.99
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Your price: $
+      22
+       when you buy 
+      4
+       or more
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Get 
+      5
+       ads for the price of 
+      1
+    </span>
+  </div>
+</div>
+`;

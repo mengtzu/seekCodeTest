@@ -24,7 +24,7 @@ const renderSavings = (savings) => {
     }
 };
 
-const AdTypeSubtotal = ({ adType, products, discounts, adPacksForm}) => {
+export const AdTypeSubtotal = ({ adType, products, discounts, adPacksForm}) => {
     let subTotal = 0;
     let savings = 0;
 

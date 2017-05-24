@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly for Classic 1`] = `
+<div
+  className="classic"
+>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      30 days on site allowing you to make unlimited changes
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Matched to relevant candidates via email
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Appears across mobile, desktop and tablet devices
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Access to proactively find profiles on SEEK Talent Search
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Free candidate management tools
+    </span>
+  </div>
+</div>
+`;
+
+exports[`renders correctly for PREMIUM 1`] = `
+<div
+  className="premium"
+>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      30 days on site allowing you to make unlimited changes
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Matched to relevant candidates via email
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Appears across mobile, desktop and tablet devices
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Access to proactively find profiles on SEEK Talent Search
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Free candidate management tools
+    </span>
+  </div>
+  <div>
+    <div>
+      <div
+        className="root"
+      >
+        <span
+          className=""
+        >
+          Company logo to promote your brand
+        </span>
+      </div>
+      <div
+        className="root"
+      >
+        <span
+          className=""
+        >
+          Additional 3 selling points to sell your role
+        </span>
+      </div>
+      <div
+        className="root"
+      >
+        <span
+          className=""
+        >
+          Bold, eye-catching border
+        </span>
+      </div>
+    </div>
+    <div
+      className="root"
+    >
+      <span
+        className="root"
+      >
+        Priority position at the top of search results for 7 days
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly for Standout 1`] = `
+<div
+  className="standout"
+>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      30 days on site allowing you to make unlimited changes
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Matched to relevant candidates via email
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Appears across mobile, desktop and tablet devices
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Access to proactively find profiles on SEEK Talent Search
+    </span>
+  </div>
+  <div
+    className="root"
+  >
+    <span
+      className=""
+    >
+      Free candidate management tools
+    </span>
+  </div>
+  <div>
+    <div
+      className="root"
+    >
+      <span
+        className=""
+      >
+        Company logo to promote your brand
+      </span>
+    </div>
+    <div
+      className="root"
+    >
+      <span
+        className=""
+      >
+        Additional 3 selling points to sell your role
+      </span>
+    </div>
+    <div
+      className="root"
+    >
+      <span
+        className=""
+      >
+        Bold, eye-catching border
+      </span>
+    </div>
+  </div>
+</div>
+`;

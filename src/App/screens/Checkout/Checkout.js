@@ -10,7 +10,6 @@ import {
 } from 'seek-style-guide/react';
 import styles from './Checkout.less';
 import { formatMoney } from 'accounting-js';
-import './VISA-logo.png';
 
 import { CLASSIC, STANDOUT, PREMIUM } from '../../../shared/constants/products';
 import { completePayment } from './actions/checkoutActions';
@@ -49,7 +48,7 @@ const renderLineItem = (label, lineItem) => {
     }
 };
 
-const Checkout = ({ checkout, advertiser, history, handlePayment }) => {
+export const Checkout = ({ checkout, advertiser, history, handlePayment }) => {
 
     const onPaymentClick = () => {
         return handlePayment(history, checkout);

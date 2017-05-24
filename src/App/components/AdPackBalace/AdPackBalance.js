@@ -4,8 +4,7 @@ import {
     PageBlock,
     Card,
     Section,
-    Text,
-    Strong
+    Text
 } from 'seek-style-guide/react';
 import styles from './AdPackBalance.less';
 
@@ -26,7 +25,7 @@ const renderPackBalance = (label, quantity) => {
     )
 };
 
-const AdPackBalance = ({ adStock }) => {
+export const AdPackBalance = ({ adStock }) => {
     return (
         <div className={styles.root}>
             <PageBlock>

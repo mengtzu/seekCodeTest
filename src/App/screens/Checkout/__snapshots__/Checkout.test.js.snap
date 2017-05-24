@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className=""
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="root header"
+      >
+        <div
+          className="root hero"
+        >
+          <span
+            className=""
+          >
+            Checkout
+          </span>
+        </div>
+      </div>
+      <div
+        className="paymentInfoWrapper"
+      >
+        <div
+          className="lineItemsWrapper"
+        >
+          <div
+            className="root"
+          >
+            <div
+              className="root"
+            >
+              <div
+                className="root heading"
+              >
+                <span
+                  className="root"
+                >
+                  Standout Ads
+                </span>
+              </div>
+              <div
+                className="lineItemWrapper"
+              >
+                <div
+                  className="root"
+                >
+                  <span
+                    className=""
+                  >
+                    Quantity: 
+                    4
+                  </span>
+                </div>
+                <div
+                  className="root lineItemPrice"
+                >
+                  <span
+                    className="root"
+                  >
+                    $40.00
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="root"
+          >
+            <div
+              className="root"
+            >
+              <div
+                className="root heading"
+              >
+                <span
+                  className="root"
+                >
+                  Premium Ads
+                </span>
+              </div>
+              <div
+                className="lineItemWrapper"
+              >
+                <div
+                  className="root"
+                >
+                  <span
+                    className=""
+                  >
+                    Quantity: 
+                    5
+                  </span>
+                </div>
+                <div
+                  className="root lineItemPrice"
+                >
+                  <span
+                    className="root"
+                  >
+                    $50.00
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="cardInfoWrapper"
+        >
+          <div
+            className="root"
+          >
+            <div
+              className="root"
+            >
+              <div
+                className="root"
+              >
+                <span
+                  className=""
+                >
+                  Using saved card for 
+                  <strong
+                    className="root"
+                  >
+                    Bentenmaru
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="cardWrapper"
+              >
+                <div
+                  className="creditCardLogo"
+                />
+                <div
+                  className="creditCardText"
+                >
+                  <div
+                    className="root"
+                  >
+                    <span
+                      className=""
+                    >
+                      422******2222
+                    </span>
+                  </div>
+                  <div
+                    className="root"
+                  >
+                    <span
+                      className=""
+                    >
+                      <strong
+                        className="root"
+                      >
+                        Expiry: 
+                      </strong>
+                       12/55
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="root"
+            >
+              <button
+                className="root root_isBlue"
+                disabled={false}
+                onClick={[Function]}
+              >
+                Change
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="paymentActionWrapper"
+      >
+        <div
+          className="totalWrapper root"
+        >
+          <div
+            className="root heading"
+          >
+            <span
+              className=""
+            >
+              Total
+            </span>
+          </div>
+          <div
+            className="totalItemWrapper"
+          >
+            <div
+              className="root"
+            >
+              <span
+                className=""
+              >
+                Sub Total:
+              </span>
+            </div>
+            <div
+              className="root totalItemPrice"
+            >
+              <span
+                className="root"
+              >
+                $90.00
+              </span>
+            </div>
+          </div>
+          <div
+            className="totalItemWrapper"
+          >
+            <div
+              className="root"
+            >
+              <span
+                className=""
+              >
+                GST:
+              </span>
+            </div>
+            <div
+              className="root totalItemPrice"
+            >
+              <span
+                className="root"
+              >
+                $9.00
+              </span>
+            </div>
+          </div>
+          <div
+            className="totalItemWrapper"
+          >
+            <div
+              className="root"
+            >
+              <span
+                className="root"
+              >
+                Grand Total:
+              </span>
+            </div>
+            <div
+              className="root totalItemPrice"
+            >
+              <span
+                className="root"
+              >
+                $99.00
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="actionButtons root"
+        >
+          <button
+            className="root root_isPink"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Pay Now
+          </button>
+          <button
+            className="root backButton root_isTransparent"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Go back
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="root"
+  >
+    <div
+      className=""
+    >
+      <div
+        className="content"
+      >
+        <div
+          className="chotto root"
+        >
+          <div
+            className="root heading"
+          >
+            <span
+              className=""
+            >
+              Stripe integration not included
+            </span>
+          </div>
+          <div
+            className="root"
+          >
+            <span
+              className=""
+            >
+              An actual checkout step requires some care around stored cards, confirming payments and making sure the user knows exactly what is happening with their money.  We're skipping those details here, but it just wouldn't seem right to not put this arguably necessary speedbump in for authentic UX!
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

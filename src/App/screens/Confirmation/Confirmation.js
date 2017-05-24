@@ -13,7 +13,7 @@ import AdPackBalance from '../../components/AdPackBalace/AdPackBalance';
 import CodeTestHelpMessage from '../../components/CodeTestHelpMessage/CodeTestHelpMessage';
 
 
-const Confirmation = () => {
+export const Confirmation = () => {
     return (
         <div className={styles.root}>
             <PageBlock>

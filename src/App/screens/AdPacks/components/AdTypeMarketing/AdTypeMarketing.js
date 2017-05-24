@@ -41,7 +41,7 @@ const getCopy = (adType) => {
     }
 };
 
-const AdTypeMarketing = ({ adType }) => {
+export const AdTypeMarketing = ({ adType }) => {
     return (
         <div className={getClassName(adType)}>
             <Text>30 days on site allowing you to make unlimited changes</Text>

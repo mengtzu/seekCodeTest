@@ -65,7 +65,7 @@ it('Should accept cart details as computed by the API', () => {
         quantity: 4,
         subTotal: 40
     };
-    shoppingCart[STANDOUT] = {
+    shoppingCart[PREMIUM] = {
         quantity: 5,
         subTotal: 50
     };

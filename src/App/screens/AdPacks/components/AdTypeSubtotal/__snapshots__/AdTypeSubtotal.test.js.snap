@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with no ads 1`] = `null`;
+
+exports[`renders correctly with no valid discounts 1`] = `
+<div
+  className="root subheading"
+>
+  <span
+    className=""
+  >
+    Subtotal: 
+    $15,554.00
+     
+  </span>
+</div>
+`;
+
+exports[`renders correctly with valid discounts 1`] = `
+<div
+  className="root subheading"
+>
+  <span
+    className=""
+  >
+    Subtotal: 
+    $132.00
+     
+    <span
+      className="savings"
+    >
+      (You save 
+      $16,962.00
+      !)
+    </span>
+  </span>
+</div>
+`;

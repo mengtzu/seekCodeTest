@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-const SeekStoreHeader = (props) => {
+export const SeekStoreHeader = (props) => {
     return (
         <Header
             authenticationStatus={props.authenticationStatus}

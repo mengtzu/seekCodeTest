@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
     }
 };
 
-const Discounts = ({ adType, discounts }) => {
+export const Discounts = ({ adType, discounts }) => {
     const discountsForDisplay = discounts.map((discount, index) => {
         if (discount.ad === adType) {
             switch (discount.type) {

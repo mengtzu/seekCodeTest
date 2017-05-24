@@ -67,7 +67,7 @@ const renderAdType = (label, adType, basePrice) => (
     </PageBlock>
 );
 
-const AdPacksForm = ({ products, handleSubmit, submitting }) => {
+export const AdPacksForm = ({ products, handleSubmit, submitting }) => {
     return (
         <form onSubmit={handleSubmit}>
             {renderAdType('Classic Ad', CLASSIC, products[CLASSIC].basePrice)}
