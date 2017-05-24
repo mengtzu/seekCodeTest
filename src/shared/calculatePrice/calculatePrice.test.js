@@ -553,7 +553,8 @@ it('Fulfils the fourth code test example scenario - Nike', () => {
    const discounts = [{
       type: DISCOUNT_TYPE_THRESHOLD,
       ad: PREMIUM,
-      threshold: 4
+      threshold: 4,
+      price: 379.99
    }];
 
    quantities[CLASSIC].quantity = 0;

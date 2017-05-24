@@ -9,6 +9,10 @@ Code test implementation
 
 A browser window should open running the app at http://localhost:8080/
 
+### Running Tests
+
+Run `npm test` in the directory where you cloned this repo
+
 ### Assumptions, Strategies and Constraints
 
  - I concentrated heavily on the user experience.  In a SEEK context, the brief
@@ -28,6 +32,10 @@ A browser window should open running the app at http://localhost:8080/
  Likewise a new kind of ad probably needs UI and UX considerations, it's unlikely
  any change to the react app would be the hardest/slowest part of that process.
 
+ - The "X for Y" rule is strictly a discount, it doesn't bump up the quantity of
+ a relevant ad type from Y to X.  I didn't like the UX of changing the quantity
+ the customer entered, as opposed to its result (and this provided a simpler implementation).
+
  - I wanted to keep as much of my submitted code within the confines of my
  app and indicative of my intentions as possible.  Thus I chose accelerators
  that keep a lot of boilerplate/config/UI primitives in node_modules.  Choosing
@@ -36,6 +44,11 @@ A browser window should open running the app at http://localhost:8080/
  If I was happy to get less SEEK visual styling for free, I could have just as
  readily used create-react-app and material design or what have you (not
  bootstrap, I have some pride)
+
+ - The API is considered to be in friendly hands (eg maintained by the same team).
+ Limited validation of rules is in place to prevent obvious cases of accidentally
+ costing the customer extra money, but I didn't spend a lot of time on verifying
+ the returns are well formed.
 
  - I didn't consider it worthwhile to connect to a mock API served from express
  or Mountebank, since the code test never needs to hit a real API.  The actions
@@ -70,33 +83,6 @@ A browser window should open running the app at http://localhost:8080/
  That is not where I would want the user to suffer latency.  The app would
  benefit from animations and transitions to improve the appearance of responsiveness
  but time did not allow.
-
-
- ### Great, what about the tests?  `npm test` right?
-
- Er, no.
-
- I (unwisely?) took an early version of sku as my bootstrapper, which handled
- jest config for me.  I ended up spending the time I intended to devote to writing
- tests trying to debug jest; by the time I gave up I didn't have time to pivot to
- setting up my own chai/enzyme/etc etc (not least because that would probably
- require doing my own babel or even webpack config instead of sku's).  So I don't
- have tests.
-
- The testing strategy would have been as follows:
-
- - Extensive logic testing for `shared/calculatePrice`.  This is right in
- unit testing's wheelhouse, verifying a critical function (pricing) in pure
- javascript.  It would be easy to rapidly add tests by varying the mock discounts
- and quantities, exercising edge cases of the pricing engine (like verifying
- discounts never made anything more *expensive*)
-
- - Limited snapshot testing of the `components`, most of which are very simple
-
- - More rigorous snapshot testing of the `screens`, ensuring they have the things
- the business would expect them to have (such as all three product types)
-
- - Absolutely no testing of anyone else's functionality (React, the "fakeAPI")
 
  - End to End testing would be out of scope for a code test but probably necessary
  in real life.  E2E is expensive and often frustratingly flaky, but we still
